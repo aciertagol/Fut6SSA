@@ -1,0 +1,79 @@
+/* Fondo animado */
+.fondo-animado {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.balon {
+  position: absolute;
+  inline-size: 50px;
+  block-size: 50px;
+  background-image: url("https://www.pngplay.com/wp-content/uploads/13/Soccer-Ball-PNG-Clipart-Background.png");
+  background-size: cover;
+  opacity: 0.6;
+  border-radius: 50%;
+  animation: moverBalon 10s linear infinite;
+}
+
+@keyframes moverBalon {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+/* Carrusel de banners */
+.banner-swiper {
+  block-size: 500px;
+  max-inline-size: 1300px;
+  margin: 0 auto;
+}
+
+/* Carrusel de patrocinadores */
+.patrocinadores-swiper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  block-size: 200px;
+  max-inline-size: 1100px;
+  margin: 0 auto;
+}
+
+.patrocinador-logo {
+  inline-size: 150px;
+  max-block-size: 150px;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  cursor: pointer;
+  filter: grayscale(100%);
+}
+
+.patrocinador-logo:hover {
+  transform: scale(1.1);
+  filter: grayscale(0);
+}
+
+/* Personalización de botones de Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.swiper-pagination-bullet {
+  background: #ffcc00;
+}
